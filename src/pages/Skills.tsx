@@ -18,6 +18,7 @@ import type { SkillCategory } from '@/types';
 const CATEGORY_ORDER: SkillCategory[] = [
   'Programming',
   'Business Intelligence',
+  'Data Analysis',
   'Machine Learning',
   'Visualization',
   'Business Analytics',
@@ -29,6 +30,7 @@ const CATEGORY_ORDER: SkillCategory[] = [
 const CATEGORY_DESCRIPTIONS: Record<SkillCategory, string> = {
   Programming: 'Core programming and query languages used across every project.',
   'Business Intelligence': 'Dashboarding, modeling, and business-intelligence workflow.',
+  'Data Analysis': 'Data cleaning, exploration, and statistical analysis with Python libraries.',
   'Machine Learning': 'Model building and data manipulation with Python.',
   Visualization: 'Charting and visual analysis libraries.',
   'Business Analytics': 'Statistical analysis and survey/experiment tooling.',
@@ -40,6 +42,7 @@ const CATEGORY_DESCRIPTIONS: Record<SkillCategory, string> = {
 const CATEGORY_ICONS: Record<SkillCategory, typeof FiCode> = {
   Programming: FiCode,
   'Business Intelligence': FiBarChart2,
+  'Data Analysis': FiDatabase,
   'Machine Learning': FiCpu,
   Visualization: FiPieChart,
   'Business Analytics': FiTrendingUp,

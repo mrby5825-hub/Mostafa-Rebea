@@ -12,6 +12,7 @@ export interface SocialLink {
 export type SkillCategory =
   | 'Programming'
   | 'Business Intelligence'
+  | 'Data Analysis'
   | 'Machine Learning'
   | 'Visualization'
   | 'Business Analytics'
