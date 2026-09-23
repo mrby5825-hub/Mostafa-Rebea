@@ -523,39 +523,93 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'studentPerformance',
-    title: 'Student Performance Intelligence — Streamlit Analytics & ML Dashboard',
+
+    title: 'Student Performance Intelligence — Data Analytics & ML Dashboard',
+
     tagline:
-      'An interactive Streamlit dashboard that predicts student outcomes and caught — then fixed — a data leakage bug in its own ML pipeline.',
+      'A team-based end-to-end student analytics project combining PostgreSQL, SQL, Python, machine learning, Power BI, and an interactive Streamlit prediction application.',
+
     category: ['Python / ML'],
-    cover: '/images/projects/spi-00-poster.png',
+
+    cover:
+      '/images/projects/Gemini_Generated_Image_zpmerzpmerzpmerz.jpg',
+
     gallery: [
-      // 👇 ADD PHOTOS HERE — Student Performance Intelligence Dashboard (replace/extend these 2)
-      { src: '/images/projects/spi-00-poster.png', caption: 'Model audit — R² corrected from an inflated 1.000 to an honest 0.79–0.87' },
+      {
+        src: '/images/projects/Perfomance Distrebution.png',
+        caption: 'SQL performance distribution analysis',
+      },
+      {
+        src: '/images/projects/1.png',
+        caption: 'Power BI analysis — Academic Index by Number of Siblings',
+      },
+      {
+        src: '/images/projects/2.png',
+        caption: 'Power BI analysis — Academic Index by Attendance Rate',
+      },
+      {
+        src: '/images/projects/3.png',
+        caption: 'PostgreSQL student staging data',
+      },
+      {
+        src: '/images/projects/4.png',
+        caption: 'Student Performance Data Warehouse schema',
+      },
     ],
+
     businessProblem:
-      'Educators had no easy way to monitor student performance or flag at-risk students early from raw attendance, study-habit, and demographic data — and the first version of the prediction model looked suspiciously perfect (R² = 1.000), which meant it could not be trusted for real decisions.',
-    dataset: '30,641 student records — attendance, study habits, and socio-demographic fields',
-    tools: ['Python 3', 'Pandas', 'Scikit-learn', 'Streamlit', 'Plotly', 'Joblib'],
+      'The project aimed to centralize student data and turn academic, behavioral, attendance, and demographic information into useful analytics and predictive insights through an end-to-end data solution.',
+
+    dataset:
+      '30,641 student records covering academic performance, attendance, study habits, behavioral indicators, and demographic information',
+
+    tools: [
+      'Python',
+      'Pandas',
+      'NumPy',
+      'Scikit-learn',
+      'PostgreSQL',
+      'SQL',
+      'Power BI',
+      'Streamlit',
+    ],
+
     insights: [
-      'Built a 5-tab Streamlit dashboard (Overview, Subjects, Attendance, Insights, AI Prediction) with a live "What-If" simulator powered by a MultiOutputRegressor (Random Forest) model predicting Academic Index and Overall Performance.',
-      'Noticed a suspicious R² = 1.000 while reviewing the first version and traced it to target leakage: the target columns were mathematically derived from features the model was also trained on.',
-      'Audited every column, removed the six leaking features, and rebuilt the pipeline to predict purely from attendance, study habits, and socio-demographic data — the honest signal available before a student\'s results exist.',
-      'Honest R² landed at 0.79 (Academic Index) and 0.87 (Overall Performance), down from an inflated 1.000 / 0.971, with model size cut from 112MB to 8.5MB.',
-      'Restructured the project into a clean, modular repo (src/, app/, models/, data/) with a proper train/test split order and a single bundled model artifact.',
+      'Built a multi-output machine learning model using RandomForestRegressor and MultiOutputRegressor to predict Academic Index and Overall Performance.',
+
+      'Prepared categorical variables using LabelEncoder and created reusable label mappings for consistent use in the Streamlit prediction interface.',
+
+      'Developed an interactive Streamlit prediction application where users can enter academic, attendance, behavioral, study, and demographic inputs and receive predicted Academic Index and Overall Performance.',
+
+      'Used PostgreSQL and SQL to structure, store, and analyze student data through staging and data warehouse components.',
+
+      'Created analytical visualizations covering performance distribution, academic performance by student characteristics, and the relationship between attendance and academic performance.',
+
+      'Combined data engineering, database development, analytics, visualization, and machine learning into an end-to-end student performance solution.',
     ],
+
     impact:
-      'Solved it by auditing every feature for leakage, removing the six offending columns, and rebuilding on honest pre-outcome data — trading an inflated 1.000 R² for a trustworthy 0.79–0.87, which is what actually ships to educators as a 5-tab dashboard with a live What-If simulator.',
+      'The project transformed raw student data into a structured analytics workflow using PostgreSQL and SQL, analytical visualizations, and an interactive Streamlit machine learning application for student performance prediction.',
+
     role:
-      'Designed and built the full dashboard and ML pipeline solo — EDA, feature engineering, the original model, the leakage audit, the leak-free rebuild, and the Streamlit UI.',
+      'Team Project — Contributed across the project lifecycle, including data preparation, ETL, PostgreSQL and SQL work, analytics, machine learning, visualization, and Streamlit dashboard development in collaboration with the team.',
+
     roadmap: [
-      'Explored the 30,641-row dataset and engineered features from attendance, study habits, and demographics.',
-      'Trained a first MultiOutputRegressor (Random Forest) to predict Academic Index and Overall Performance.',
-      'Noticed a suspicious R² = 1.000 and traced it to target leakage — some features were mathematically derived from the targets.',
-      'Audited every column, removed the six leaking features, and rebuilt the pipeline on honest, pre-outcome data only.',
-      'Re-trained and validated the leak-free model, landing at a realistic R² of 0.79 / 0.87.',
-      'Restructured the codebase into a clean src/ app/ models/ data/ layout and built the 5-tab Streamlit dashboard with a live What-If simulator.',
+      'Collected and prepared student performance data from multiple CSV sources.',
+
+      'Cleaned and transformed the data using Python and Pandas before loading it into PostgreSQL.',
+
+      'Designed the database and data warehouse structure with staging, dimension, and fact components.',
+
+      'Performed SQL-based analysis to examine student performance groups and identify performance patterns.',
+
+      'Created Power BI visualizations to explore academic performance across attendance and demographic factors.',
+
+      'Trained a MultiOutputRegressor using Random Forest to predict Academic Index and Overall Performance.',
+
+      'Developed the Streamlit prediction interface with categorical selectors, numeric inputs, and live model predictions.',
     ],
-    // No repo link given yet — add it in links.ts (studentPerformance) when ready.
+
     githubKey: 'studentPerformance',
   },
   {
