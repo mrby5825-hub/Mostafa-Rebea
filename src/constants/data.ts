@@ -22,7 +22,7 @@ export const PERSONAL = {
   // Shorter variant used in the hero section — the full summary above still lives in About.
   heroSummary:
     'I design and build Business Intelligence solutions — from Power BI dashboards and SQL data models to Python-driven analysis and machine learning — turning raw, messy data into reporting that supports real business decisions.',
-  cvPath: '/cv/Mostafa_Rebea_Ahmed_Resume(7).pdf',
+  cvPath: '/cv/Mostafa Rebea Data Analyst.pdf',
   profileImage: '/images/profile/Por images.jpg',
 };
 
