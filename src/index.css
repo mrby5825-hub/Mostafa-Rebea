@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html.light {
+    color-scheme: light;
+  }
+
+  * {
+    @apply border-base-600/40;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base-900 text-ink-100 font-body antialiased;
+    background-image: radial-gradient(
+        circle at 15% 0%,
+        rgba(47, 224, 198, 0.08),
+        transparent 45%
+      ),
+      radial-gradient(circle at 100% 20%, rgba(245, 185, 66, 0.06), transparent 40%);
+    background-attachment: fixed;
+  }
+
+  html.light body {
+    @apply bg-ink-100 text-base-900;
+    background-image: radial-gradient(
+        circle at 15% 0%,
+        rgba(28, 168, 147, 0.08),
+        transparent 45%
+      ),
+      radial-gradient(circle at 100% 20%, rgba(201, 143, 38, 0.06), transparent 40%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-signal/30 text-ink-100;
+  }
+
+  :focus-visible {
+    outline: 2px solid #2fe0c6;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply relative rounded-xl2 border border-white/10 bg-white/[0.03] backdrop-blur-xl shadow-glass;
+  }
+
+  html.light .glass-panel {
+    @apply border-base-900/10 bg-white/60;
+  }
+
+  html.light header .rounded-full.border-white\/10 {
+    @apply border-base-900/10 bg-white/70;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.25em] text-signal;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-signal px-6 py-3 font-display text-sm font-semibold text-base-950 transition-transform duration-300 hover:scale-[1.03] hover:shadow-glow-signal active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-display text-sm font-semibold text-ink-100 backdrop-blur-md transition-colors duration-300 hover:border-signal/60 hover:text-signal;
+  }
+
+  html.light .btn-secondary {
+    @apply border-base-900/15 bg-black/[0.03] text-base-900;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(47, 224, 198, 0.3);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(47, 224, 198, 0.5);
+}
