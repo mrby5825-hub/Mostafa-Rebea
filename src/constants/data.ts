@@ -540,7 +540,7 @@ export const PROJECTS: Project[] = [
         caption: 'SQL performance distribution analysis',
       },
       {
-        src: '/images/projects/1.png',
+        src: '/images/projects/1 (2).png',
         caption: 'Power BI analysis — Academic Index by Number of Siblings',
       },
       {
