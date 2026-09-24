@@ -540,19 +540,19 @@ export const PROJECTS: Project[] = [
         caption: 'SQL performance distribution analysis',
       },
       {
-        src: '/images/projects/Data Modal 1.png',
+        src: '/images/projects/Data Modal 1.jpg',
         caption: 'Power BI analysis — Academic Index by Number of Siblings',
       },
       {
-        src: '/images/projects/Data Modal 2.png',
+        src: '/images/projects/Data Modal 2.jpg',
         caption: 'Power BI analysis — Academic Index by Attendance Rate',
       },
       {
-        src: '/images/projects/Data Modal 3.png',
+        src: '/images/projects/Data Modal 3.jpg',
         caption: 'PostgreSQL student staging data',
       },
       {
-        src: '/images/projects/Data Modal 4.png',
+        src: '/images/projects/Data Modal 4.jpg',
         caption: 'Student Performance Data Warehouse schema',
       },
     ],
